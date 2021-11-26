@@ -8,18 +8,18 @@
   <title>相邻兄弟与focus伪类交互</title>
   <style>
     .css-tips {
-      font-size: 14px;
+      font-size: 12px;
       visibility: hidden;
     }
 
-    :focus+.css-tips {
+    :focus + .css-tips {
       visibility: visible;
     }
   </style>
 </head>
 
-<body>s
-  用户名：<input type="text"><span class="css-tips"></span>
+<body>
+  用户名：<input type="text"><span class="css-tips">10-15个字符</span>
 </body>
 
 </html>
