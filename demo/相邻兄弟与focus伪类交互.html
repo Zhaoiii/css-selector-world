@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>相邻兄弟与focus伪类交互</title>
+  <style>
+    .css-tips {
+      font-size: 14px;
+      visibility: hidden;
+    }
+
+    :focus+.css-tips {
+      visibility: visible;
+    }
+  </style>
+</head>
+
+<body>s
+  用户名：<input type="text"><span class="css-tips"></span>
+</body>
+
+</html>
