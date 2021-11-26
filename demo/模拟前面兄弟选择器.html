@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>模拟前面兄弟选择器</title>
+  <style>
+    /* 通用设置 */
+    .css-label {
+      display: inline-block;
+      width: 64px;
+    }
+
+    .css-input {
+      width: 200px;
+    }
+
+    :focus ~ .css-label {
+      color: red;
+      text-shadow: 0 0 1px;
+    }
+
+    /* 利用flex */
+    .css-flex {
+      display: flex;
+      justify-content: center;
+      flex-direction: row-reverse;
+    }
+    /*利用float*/
+    .css-float {
+      width: 264px;
+      margin: 1em auto;
+    }
+    .css-float .css-label{
+      display: block;
+      width: 64px;
+      
+    }
+    .css-float .css-input{
+      float: right;
+    }
+    /*利用定位*/
+    .css-absolute{
+      width: 264px;
+      margin: 1em auto;
+      position: relative;
+    }
+    .css-absolute .css-input{
+      position: absolute;
+      right: 0;
+    }
+    .css-absolute .css-label{
+      position: absolute;
+      left: 0;
+    }
+    /*利用direction*/
+    .css-direction {
+      margin: 4em auto;
+      direction: rtl;
+    }
+    .css-direction .css-label,
+    .css-direction .css-input {
+      direction: ltr;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="css-flex">
+    <input type="text" class="css-input">
+    <label class="css-label">用户名</label>
+  </div>
+  <div class="css-float">
+    <input type="text" class="css-input">
+    <label class="css-label">用户名</label>
+  </div>
+  <div class="css-absolute">
+    <input type="text" class="css-input">
+    <label class="css-label">用户名</label>
+  </div>
+  <div class="css-direction">
+    <input type="text" class="css-input">
+    <label class="css-label">用户名</label>
+  </div>
+</body>
+
+</html>

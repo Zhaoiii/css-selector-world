@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hover和相邻兄弟交互</title>
+    <style>
+        .css-panel{
+            width: 200px;
+            height: 200px;
+            background-color:darkcyan;
+            display: none;
+            transition: all 1s;
+            position: absolute;
+            left: 32px;
+        }
+        .css-menu{
+            display: inline-block;
+        }
+        .css-menu:hover + .css-panel,
+        .css-panel:hover{
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="css-menu">查看</div>
+    <div class="css-panel">这里是这里</div>
+</body>
+</html>
