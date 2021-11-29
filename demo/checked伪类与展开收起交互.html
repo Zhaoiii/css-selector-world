@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>checked伪类与展开收起交互</title>
+    <style>
+        [type="checkbox"] {
+            position: absolute;
+            visibility: hidden;
+        }
+        .css-button{
+            display: block;
+            width: 100px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            background-color:skyblue;
+        }
+
+        .css-more-p {
+            display: none;
+        }
+
+        [data-open=false] {
+            display: none;
+        }
+
+        :checked~[data-open=true] {
+            display: none;
+        }
+
+        :checked~[data-open=false],
+        :checked~.css-more-p {
+            display: block;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容
+    <input type="checkbox" id="articleMore">
+    <label class="css-button" for="articleMore" data-open="true">阅读更多</label>
+    <p class="css-more-p">更多文章内容，更多文章内容，更多文章内容，更多文章内容。</p>
+    <label class="css-button" for="articleMore" data-open="false">收起</label>
+</body>
+
+</html>
