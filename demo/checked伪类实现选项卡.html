@@ -15,8 +15,10 @@
         }
 
         :first-child:checked~.cs-tab .cs-tab-li:first-child,
-        :checked+input+.cs-tab .cs-tab-li:nth-of-type(2),
-        :checked+.cs-tab .cs-tab-li:nth-of-type(3) {
+        :nth-child(2):checked~.cs-tab .cs-tab-li:nth-of-type(2),
+        :nth-child(3):checked~.cs-tab .cs-tab-li:nth-of-type(3),
+        :nth-child(4):checked~.cs-tab .cs-tab-li:nth-of-type(4),
+        :nth-child(5):checked~.cs-tab .cs-tab-li:nth-of-type(5) {
             background-color: deepskyblue;
             color: #fff;
         }
@@ -29,7 +31,9 @@
 
         :first-child:checked~.cs-panel .cs-panel-li:first-child,
         :nth-of-type(2):checked~.cs-panel .cs-panel-li:nth-of-type(2),
-        :nth-of-type(3):checked~.cs-panel .cs-panel-li:nth-of-type(3) {
+        :nth-of-type(3):checked~.cs-panel .cs-panel-li:nth-of-type(3),
+        :nth-of-type(4):checked~.cs-panel .cs-panel-li:nth-of-type(4),
+        :nth-of-type(5):checked~.cs-panel .cs-panel-li:nth-of-type(5) {
             display: block;
         }
     </style>
@@ -40,15 +44,21 @@
         <input id="tabPanel1" type="radio" name="tab" checked hidden>
         <input id="tabPanel2" type="radio" name="tab" hidden>
         <input id="tabPanel3" type="radio" name="tab" hidden>
+        <input id="tabPanel4" type="radio" name="tab" hidden>
+        <input id="tabPanel5" type="radio" name="tab" hidden>
         <div class="cs-tab">
             <label class="cs-tab-li" for="tabPanel1">选项卡1</label>
             <label class="cs-tab-li" for="tabPanel2">选项卡2</label>
             <label class="cs-tab-li" for="tabPanel3">选项卡3</label>
+            <label class="cs-tab-li" for="tabPanel4">选项卡4</label>
+            <label class="cs-tab-li" for="tabPanel5">选项卡5</label>
         </div>
         <div class="cs-panel">
             <div class="cs-panel-li">面板内容1</div>
             <div class="cs-panel-li">面板内容2</div>
             <div class="cs-panel-li">面板内容3</div>
+            <div class="cs-panel-li">面板内容4</div>
+            <div class="cs-panel-li">面板内容5</div>
         </div>
     </div>
 </body>
